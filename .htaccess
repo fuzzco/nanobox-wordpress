@@ -1,0 +1,8 @@
+# serve alternate default index page
+DirectoryIndex /app/200.html
+
+# send all requests to 200.html
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ app/200.html [NC,L]
