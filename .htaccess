@@ -1,8 +1,9 @@
-# serve alternate default index page
-DirectoryIndex /app/200.html
+DirectoryIndex app/200.html
+RewriteEngine On
 
-# send all requests to 200.html
-RewriteEngine on
+# RewriteRule admin ../wp/wp-admin [L, R=301]
+
+# If requested resource is not a file or directory then redirect to /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ app/200.html [NC,L]
+RewriteRule . app/200.html [NC,L]
