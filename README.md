@@ -13,3 +13,7 @@ $ nanobox dns add local admin.toba.local
 ```
 
 ### Getting Started
+
+
+### CMS
+`local/wp/wp-admin/index.php`
