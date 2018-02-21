@@ -1,0 +1,49 @@
+html {
+  font-size: $base-size * 1px;
+}
+
+body {
+  font-family: $proxima;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+b {
+  @include font-weight(700);
+}
+
+mark {
+  background-color: transparent;
+  border: 1px solid $black;
+  padding: 0 $baseline;
+}
+
+.link-strong {
+  @include font-size(3);
+  @include font-weight(700);
+  @include tracking(100);
+  text-transform: uppercase;
+  color: $black;
+  text-decoration: none;
+  border-bottom: 1px solid $black;
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+.view-title {
+  @include font-size(6);
+  @include font-weight(300);
+  font-family: $kulturista;
+  text-align: center;
+}
+

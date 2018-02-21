@@ -1,0 +1,49 @@
+@mixin lead-top ($n) {
+  margin-top: $n * $leading;
+}
+@mixin lead-bottom ($n) {
+  margin-bottom: $n * $leading;
+}
+@mixin padding-top ($n) {
+  padding-top: $n * $leading;
+}
+@mixin padding-bottom ($n) {
+  padding-bottom: $n * $leading;
+}
+@for $i from 0 through $vertical-range {
+  .lead-#{$i} { @include lead-top($i); }
+}
+@for $i from 0 through $vertical-range {
+  .lead-bottom-#{$i} { @include lead-bottom($i); }
+}
+@for $i from 0 through $vertical-range {
+  .padding-#{$i} { @include padding-top($i); }
+}
+@for $i from 0 through $vertical-range {
+  .padding-bottom-#{$i} { @include padding-bottom($i); }
+}
+
+@include not-small ()    {
+  @for $i from 0 through $vertical-range {
+    .ns-lead-#{$i} { @include lead-top($i); }
+  }
+  @for $i from 0 through $vertical-range {
+    .ns-lead-bottom-#{$i} { @include lead-bottom($i); }
+  }
+}
+@include medium-break () {
+  @for $i from 0 through $vertical-range {
+    .md-lead-#{$i} { @include lead-top($i); }
+  }
+  @for $i from 0 through $vertical-range {
+    .md-lead-bottom-#{$i} { @include lead-bottom($i); }
+  }
+}
+@include large-break ()  {
+  @for $i from 0 through $vertical-range {
+    .lg-lead-#{$i} { @include lead-top($i); }
+  }
+  @for $i from 0 through $vertical-range {
+    .lg-lead-bottom-#{$i} { @include lead-bottom($i); }
+  }
+}

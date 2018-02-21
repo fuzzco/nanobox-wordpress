@@ -1,0 +1,137 @@
+
+// ┌──────────────────────┐
+// │ Settings & Variables │
+// └──────────────────────┘
+//
+// ┌────────────┐
+// │ STRUCTURAL │
+// └────────────┘
+// ┌──────────────────┐
+// │ Scales:  Musical │
+// └──────────────────┘
+$octave:                 2;
+$major7th:               1.875;
+$minor7th:               1.778;
+$major6th:               1.667;
+$minor6th:               1.6;
+$fifth:                  1.5;
+$dim5th:                 1.414;
+$aug4th:                 1.414;
+$fourth:                 1.33;
+$major3rd:               1.25;
+$minor3rd:               1.2;
+$major2nd:               1.125;
+$minor2nd:               1.067;
+$unison:                 1;
+// ┌───────────────┐
+// │ Scales: Other │
+// └───────────────┘
+$golden:                 1.618;
+
+// ┌────────────┐
+// │ TYPOGRAPHY │
+// └────────────┘
+// ┌────────────┐
+// │ Type:Sizes │
+// └────────────┘
+$base-size:              18;
+$point:                  (1/$base-size);
+$rem-size:               $base-size * 1px;
+$ratio:                  $golden;
+$body-size:              1rem;
+$small-size:             0.85rem;
+$baseline:               0.14285rem;
+$leading:                10*$baseline;
+$indent:                 1em;
+$type-sizes: (
+  (10, 12),
+  (14, 16),
+  (14, 17),
+  (18, 22),
+  (24, 24),
+  (32, 38),
+  (40, 48)
+);
+
+// ┌────────────┐
+// │ Type:Faces │
+// └────────────┘
+
+
+// ┌─────────────┐
+// │ Type:Stacks │
+// └─────────────┘
+@import url("https://use.typekit.net/ezw6icr.css");
+
+$proxima: "proxima-nova", sans-serif;
+$kulturista: "kulturista-web", serif;
+$meta: "ff-meta-web-pro", sans-serif;
+
+// ┌─────────────────────┐
+// │ Type:CSS Generation │
+// └─────────────────────┘
+$include-leading:                 true;
+$leading-responsive:      true;
+$tracking:                     false;
+$tracking-responsive:          false;
+$word-spacing:                 false;
+$word-spacing-responsive:      false;
+$alignment:               true;
+$alignment-responsive:    true;
+$font-scale:                   false;
+$font-scale-responsive:        false;
+$font-size:               true;
+$font-size-responsive:         false;
+$font-weight:             true;
+  $fw-thin:                    false;
+  $fw-light:              true;
+  $fw-regular:            true;
+  $fw-medium:                  false;
+  $fw-demi:                    false;
+  $fw-bold:               true;
+  $fw-black:                   false;
+$font-weight-responsive:       false;
+$font-style:              true;
+$font-style-responsive:        false;
+
+// ┌──────┐
+// │ GRID │
+// └──────┘
+// ┌──────────────────┐
+// │ Container Widths │
+// └──────────────────┘
+$container-ratio:        1;
+$container-ratio-medium: 1;
+$container-ratio-large:  1;
+$max-width:              56.667rem;
+// ┌───────────────┐
+// │ Grid: Columns │
+// └───────────────┘
+$gutter:                 2.15%;
+$col-count:              12;
+// ┌───────────────┐
+// │ Grid: Spacing │
+// └───────────────┘
+$vertical-range: 6;
+$spacing: (
+  padding-x: $gutter,
+  padding-y: $baseline,
+  padding-outer-x: $gutter / 2,
+  padding-outer-y: $baseline
+);
+$padding-x: map-get($spacing, padding-x);
+$padding-y: map-get($spacing, padding-y);
+$padding-outer-x: map-get($spacing, padding-outer-x);
+$padding-outer-y: map-get($spacing, padding-outer-y);
+
+
+// ┌─────────────────────────┐
+// │ Media Query Breakpoints │
+// └─────────────────────────┘
+$small:                  25rem;
+$large:                  40rem;
+
+// ┌────────┐
+// │ Colors │
+// └────────┘
+$black: #333;
