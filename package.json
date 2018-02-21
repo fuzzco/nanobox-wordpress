@@ -4,8 +4,15 @@
   "description": "Toba Capital",
   "main": "index.js",
   "scripts": {
-    "start": "nanobox run php-server",
-    "test": "test"
+    "build": "rollup -c --environment dev",
+    "dev": "parallelshell 'npm run js' 'npm run serve' 'npm run css'",
+    "serve": "nanobox run php-server",
+    "js": "rollup -c -w",
+    "precss": "node-sass src/scss/ -o app/",
+    "css": "node-sass src/scss -o app/ --watch",
+    "img": "imagemin-newer src/img/ app/img/",
+    "prestart": "npm run img",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
