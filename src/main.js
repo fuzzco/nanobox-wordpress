@@ -8,6 +8,3 @@ const app = new App({
 
 // change the data associated with the template
 app.set({ name: 'Toba' });
-
-// detach the component and clean everything up
-app.destroy();

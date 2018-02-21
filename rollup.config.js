@@ -8,11 +8,12 @@ import uglify from 'rollup-plugin-uglify';
 const production = !!process.env.production;
 
 export default {
-  entry: 'src/main.js',
-  dest: 'app/bundle.js',
-  format: 'iife',
-  moduleName: 'app',
-  sourceMap: true,
+  input: 'src/main.js',
+  output: {
+    name: 'app',
+    format: 'iife',
+    file: 'app/bundle.js'
+  },
   plugins: [
     svelte(),
     resolve(),
