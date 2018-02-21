@@ -1,2 +1,6 @@
 wp/
 node_modules/
+app/bundle.js
+app/bundle.min.js
+app/style.css
+app/style.min.css
