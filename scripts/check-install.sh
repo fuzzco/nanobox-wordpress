@@ -7,3 +7,4 @@ else
   echo 'nope we need that'
   git clone git@github.com:fuzzco/nanobox-wordpress.git wp
 fi
+cp -rp ./wp-plugins/ ./wp/wp-content/plugins/
