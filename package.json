@@ -4,6 +4,7 @@
   "description": "Toba Capital",
   "main": "index.js",
   "scripts": {
+    "start": "nanobox run php-server",
     "test": "test"
   },
   "repository": {

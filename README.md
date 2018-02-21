@@ -14,6 +14,17 @@ $ nanobox dns add local admin.toba.local
 
 ### Getting Started
 
+```
+$ git clone toba.git toba
+$ npm run init
+```
+
+##  Development
+
+```
+$ npm install
+$ npm start
+```
 
 ### CMS
 `local/wp/wp-admin/index.php`
