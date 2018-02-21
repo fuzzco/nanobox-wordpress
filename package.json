@@ -4,6 +4,8 @@
   "description": "Toba Capital",
   "main": "index.js",
   "scripts": {
+    "init": "./scripts/init.sh",
+    "prestart": "./scripts/check-install.sh",
     "build": "rollup -c --environment dev",
     "dev": "parallelshell 'npm run js' 'npm run serve' 'npm run css'",
     "serve": "nanobox run php-server",
@@ -36,6 +38,7 @@
     "rollup-plugin-node-resolve": "^3.0.3",
     "rollup-plugin-svelte": "^4.0.0",
     "rollup-plugin-uglify": "^3.0.0",
-    "rollup-watch": "^4.3.1"
+    "rollup-watch": "^4.3.1",
+    "svelte": "^1.55.0"
   }
 }
