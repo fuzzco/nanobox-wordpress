@@ -3,6 +3,10 @@ RewriteEngine On
 
 # RewriteRule admin ../wp/wp-admin [L, R=301]
 
+RewriteCond %{HTTP_HOST} ^wp.toba.local$
+RewriteCond %{REQUEST_URI} !wp/
+RewriteRule (.*) /wp/$1 [L]
+
 # If requested resource is not a file or directory then redirect to /
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]

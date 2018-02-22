@@ -14,6 +14,7 @@
     "css": "node-sass src/scss -o app/ --watch",
     "img": "imagemin-newer src/img/ app/img/",
     "prestart": "npm run img",
+    "stage": "nanobox deploy toba-staging",
     "start": "npm run dev"
   },
   "repository": {
