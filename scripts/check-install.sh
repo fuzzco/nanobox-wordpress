@@ -8,4 +8,4 @@ else
   git clone git@github.com:nanobox-quickstarts/nanobox-wordpress.git wp
 fi
 rsync -va --delete ./plugins/ ./wp/wp-content/plugins/
-rsync -va --exclude='node_modules' --delete ./themes/ ./wp/wp-content/themes/
+rsync -va --exclude='node_modules' --delete ./theme/ ./wp/wp-content/themes/

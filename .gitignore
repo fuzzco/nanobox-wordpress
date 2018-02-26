@@ -1,6 +1,6 @@
 wp/
 node_modules/
-app/bundle.js
-app/bundle.min.js
-app/style.css
-app/style.min.css
+theme/bundle.js
+theme/bundle.min.js
+theme/style.css
+theme/style.min.css

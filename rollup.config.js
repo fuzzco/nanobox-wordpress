@@ -7,12 +7,16 @@ import uglify from 'rollup-plugin-uglify';
 
 const production = !!process.env.production;
 
+let file = 'theme/bundle.js'
+production ? file = 'theme/bundle.min.js' : file = 'theme/bundle.js'
+
+
 export default {
-  input: 'src/main.js',
+  input: 'theme/es6/main.js',
   output: {
     name: 'app',
     format: 'iife',
-    file: 'app/bundle.js'
+    file: file
   },
   plugins: [
     svelte(),
