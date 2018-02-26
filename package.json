@@ -8,7 +8,7 @@
     "prestart": "./scripts/check-install.sh",
     "build": "rollup -c --environment dev",
     "dev": "parallelshell 'npm run watch' 'npm run js' 'npm run serve' 'npm run css'",
-    "serve": "nanobox run php-server",
+    "serve": "cd wp && nanobox run php-server",
     "js": "rollup -c -w",
     "js:min": "rollup -c --environment production",
     "precss": "node-sass ./theme/scss/style.scss -o theme/",
