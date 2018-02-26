@@ -54,7 +54,7 @@ const setup = (err, result) => {
   for (let key in result) {
     msg('yellow', `${key}: ${result[key]};`)
   }
-  bash(`nanobox dns add local ${result.name}.local`)
+  bash(`cd wp && nanobox dns add local ${result.name}.local`)
   msg('green', `Finish setting up WordPress at ${result.name}.local/wp-admin`)
 }
 
