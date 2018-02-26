@@ -7,4 +7,5 @@ else
   echo 'nope we need that'
   git clone git@github.com:nanobox-quickstarts/nanobox-wordpress.git wp
 fi
-cp -rp ./wp-plugins/ ./wp/wp-content/plugins/
+rsync -va --delete ./plugins/ ./wp/wp-content/plugins/
+rsync -va --exclude='node_modules' --delete ./themes/ ./wp/wp-content/themes/
