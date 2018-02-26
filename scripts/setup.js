@@ -57,7 +57,7 @@ const setup = (err, result) => {
   bash(`git remote remove origin`)
   bash(`git remote add origin ${result.origin}`)
   bash(`git remote add upstream ${result.upstream}`)
-  bash(`cd wp && qnanobox dns add local ${result.name}.local`)
+  bash(`cd wp && nanobox dns add local ${result.name}.local`)
   msg('green', `Finish setting up WordPress at ${result.name}.local/wp-admin`)
 }
 
