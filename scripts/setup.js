@@ -2,36 +2,6 @@ const prompt = require('prompt')
 const exec = require('child_process').exec
 const colors = require("colors/safe")
 
-// var fs = require('fs');
-
-// var obj = {
-//    table: []
-// };
-
-// fs.exists('myjsonfile.json', function(exists){
-//     if(exists){
-//         console.log("yes file exists");
-//         fs.readFile('myjsonfile.json', function readFileCallback(err, data){
-//         if (err){
-//             console.log(err);
-//         } else {
-//         obj = JSON.parse(data);
-//         for (i=0; i<5 ; i++){
-//         obj.table.push({id: i, square:i*i});
-//         }
-//         var json = JSON.stringify(obj);
-//         fs.writeFile('myjsonfile.json', json);
-//         }});
-//     } else {
-//         console.log("file not exists")
-//         for (i=0; i<5 ; i++){
-//         obj.table.push({id: i, square:i*i});
-//         }
-//         var json = JSON.stringify(obj);
-//         fs.writeFile('myjsonfile.json', json);
-//         }
-//     });
-
 const bash = cmd => {
   msg('green', `Running: ${cmd}`)
   return new Promise(function(resolve, reject) {
@@ -55,8 +25,6 @@ const setup = (err, result) => {
     msg('yellow', `${key}: ${result[key]};`)
   }
   bash(`git remote remove origin`)
-  bash(`git remote add origin ${result.origin}`)
-  bash(`git remote add upstream ${result.upstream}`)
   bash(`cd wp && nanobox dns add local ${result.name}.local`)
   msg('green', `Finish setting up WordPress at ${result.name}.local/wp-admin`)
 }
@@ -70,7 +38,7 @@ prompt.get({
     },
     stagingUrl: {
       description: colors.magenta("Staging URL:"),
-      default: '.nanoapp.io',
+      default: '<project-name>.nanoapp.io',
     },
     upstream: {
       description: colors.magenta("Upstream Git Repo:")
