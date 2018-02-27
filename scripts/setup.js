@@ -24,12 +24,11 @@ const setup = (err, result) => {
   for (let key in result) {
     msg('yellow', `${key}: ${result[key]};`)
   }
-  bash(`git remote remove origin`)
   bash(`${process.cwd()}/scripts/check-install.sh`)
-  .then(result => {
-    bash(`cd wp && nanobox dns add local ${result.name}.local`)
+  .then(ok => {
+    bash(`nanobox dns add local ${result.name}.local`)
   })
-  .then(result => {
+  .then(ok => {
     msg('green', `Finish setting up WordPress at ${result.name}.local/wp-admin`)
   })
 }
@@ -44,13 +43,6 @@ prompt.get({
     stagingUrl: {
       description: colors.magenta("Staging URL:"),
       default: '<project-name>.nanoapp.io',
-    },
-    upstream: {
-      description: colors.magenta("Upstream Git Repo:")
-    },
-    origin: {
-      description: colors.magenta("Origin Git Repo:")
     }
-
   }
 }, setup);
