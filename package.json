@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "init": "./scripts/init.sh",
-    "prestart": "./scripts/check-install.sh",
     "build": "rollup -c --environment dev",
     "dev": "parallelshell 'npm run watch' 'npm run js' 'npm run serve' 'npm run css'",
     "serve": "cd wp && nanobox run php-server",
@@ -18,7 +17,7 @@
     "watch": "rerun-script",
     "sync:plugins": "rsync -va --delete ./plugins/ ./wp/wp-content/plugins/",
     "sync:theme": "rsync -va --delete ./theme/ ./wp/wp-content/themes/fuzzco",
-    "stage": "nanobox deploy toba-staging",
+    "stage": "echo stage plz",
     "start": "npm run dev"
   },
   "watches": {
