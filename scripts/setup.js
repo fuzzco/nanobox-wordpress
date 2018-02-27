@@ -25,9 +25,13 @@ const setup = (err, result) => {
     msg('yellow', `${key}: ${result[key]};`)
   }
   bash(`git remote remove origin`)
-  bash(`${process.cwd()}/scripts/check-install`)
-  bash(`cd wp && nanobox dns add local ${result.name}.local`)
-  msg('green', `Finish setting up WordPress at ${result.name}.local/wp-admin`)
+  bash(`${process.cwd()}/scripts/check-install.sh`)
+  .then(result => {
+    bash(`cd wp && nanobox dns add local ${result.name}.local`)
+  })
+  .then(result => {
+    msg('green', `Finish setting up WordPress at ${result.name}.local/wp-admin`)
+  })
 }
 
 msg('green', 'Making Progress!')
