@@ -29,7 +29,7 @@ const setup = (err, result) => {
     bash(`nanobox dns add local ${result.name}.local`)
   })
   .then(ok => {
-    msg('green', ` Run npm start, then finish setting up WordPress at ${result.name}.local/wp-admin`)
+    msg('green', `Run npm start, then finish setting up WordPress at ${result.name}.local/wp-admin`)
   })
 }
 
