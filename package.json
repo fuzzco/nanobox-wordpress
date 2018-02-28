@@ -4,7 +4,7 @@
   "description": "Nanobox Wordpress Starter",
   "main": "index.js",
   "scripts": {
-    "init": "./scripts/init.sh",
+    "postinstall": "./scripts/init.sh",
     "build": "rollup -c --environment dev",
     "dev": "parallelshell 'npm run watch' 'npm run js' 'npm run serve' 'npm run css'",
     "serve": "nanobox run php-server",
