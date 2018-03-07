@@ -5,7 +5,7 @@ then
   echo 'yup we good'
 else
   echo 'nope we need that'
-  git clone git@github.com:nanobox-quickstarts/nanobox-wordpress.git wp
+  degit git@github.com:nanobox-quickstarts/nanobox-wordpress.git wp
 fi
 rsync -va --delete ./plugins/ ./wp/wp-content/plugins/
 rsync -va --delete ./theme/ ./wp/wp-content/themes/fuzzco

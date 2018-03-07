@@ -39,6 +39,7 @@
     "clean-css": "^4.1.9",
     "color": "^3.0.0",
     "cssnano": "^3.10.0",
+    "degit": "^2.0.2",
     "imagemin-newer": "^1.0.2",
     "node-sass": "^4.7.2",
     "parallelshell": "^3.0.2",
