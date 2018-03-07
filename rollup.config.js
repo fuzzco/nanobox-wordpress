@@ -7,22 +7,18 @@ import uglify from 'rollup-plugin-uglify';
 
 const production = !!process.env.production;
 
-let file = 'theme/bundle.js'
-production ? file = 'theme/bundle.min.js' : file = 'theme/bundle.js'
-
-
 export default {
   input: 'theme/es6/main.js',
   output: {
     name: 'app',
     format: 'iife',
-    file: file
+    file: 'theme/bundle.js'
   },
   plugins: [
     svelte(),
     resolve(),
     commonjs(),
-    production && buble({ exclude: 'node_modules/**' }),
+    buble({ exclude: 'node_modules/**' }),
     production && uglify()
   ]
 };

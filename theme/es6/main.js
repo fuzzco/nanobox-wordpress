@@ -1,5 +1,5 @@
-const hello = whoever => say => console.log(`Hello ${say}`)
+const log = say => whatever => console.log(`${say} ${whatever}`)
 
-const helloWord = say('World')
+const hello = log('Hello')
 
-helloWord()
+hello('World')

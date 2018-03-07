@@ -2,16 +2,13 @@ run.config:
   engine: php
   engine.config:
     runtime: php-7.0
-    webserver: 'nginx'
     document_root: 'wp/'
-    nginx_index_list:
-      - index.php
-      - index.html
     extensions:
       - gd
       - mysqli
       - curl
       - zlib
+      - ctype
 
 web.wp:
   start: php-server
