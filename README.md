@@ -5,7 +5,7 @@
 ### Getting Started
 
 ```
-$ git git@github.com:fuzzco/nanobox-wordpress.git project-name
+$ git clone git@github.com:fuzzco/nanobox-wordpress.git project-name
 $ npm run init
 ```
 
