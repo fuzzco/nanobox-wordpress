@@ -6,6 +6,7 @@
 
 ```
 $ git clone git@github.com:fuzzco/nanobox-wordpress.git project-name
+$ npm install
 $ npm run init
 ```
 
@@ -26,6 +27,11 @@ $ npm start
 
 0. Visit your your-site.local and finish the set up.
 1. Enable the plugins needed.
-2. Swith to the Fuzzco Theme is using Timber.
+2. Switch to the Fuzzco Theme using Timber.
+
+### Troubleshooting
+- Requires that Timber plugin be activated to work properly.
+- If Fuzzco theme is generating missing stylesheet error, make a change and save scss file in /theme/scss directory to trigger build process for /wp directory.
+- If posts won't display post template, change the permalink structure.
 
 
