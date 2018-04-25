@@ -11,15 +11,15 @@
  * Routes!
  */
 Routes::map('/', function($params){
-  Routes::load('routes/index.php', null, $params, 200);
+  Routes::load('routes/index.php', $params, null, 200);
 });
 
-Routes::map('/page', function($params){
-  Routes::load('routes/page.php', null, $params, 200);
+Routes::map('/sample-page', function($params){
+  Routes::load('routes/sample-page.php', $params, null, 200);
 });
 
 Routes::map('/:post', function($params){
-  Routes::load('routes/post.php', null, $params, 200);
+  Routes::load('routes/post.php', $params, null, 200);
 });
 
 
