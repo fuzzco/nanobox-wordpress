@@ -32,6 +32,6 @@ $ npm start
 ### Troubleshooting
 - Requires that Timber plugin be activated to work properly.
 - If Fuzzco theme is generating missing stylesheet error, make a change and save scss file in /theme/scss directory to trigger build process for /wp directory.
-- If posts won't display post template, change the permalink structure.
+- If posts/pages won't display template, change the permalink structure to post-name.
 
 
